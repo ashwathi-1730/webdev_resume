@@ -1,56 +1,124 @@
+/* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
-    max-width: 960px;
-    margin: auto;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
-h1 {
-    font-size: 3em;
-    letter-spacing: .6em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-h2 {
-    font-size: 1.5em;
-    padding-bottom: 1em;
-}
-
-h3 {
-    font-size: 1em;
-    padding-bottom: 1em;
-}
-
-    main { 
-        display: grid;
-        grid-template-columns: 40% 60%;
-        margin-top: 3em;
-    }
 
 header {
     text-align: center;
-    margin: auto 2em;
+    margin-top: 20px;
 }
 
-section {
-    margin: auto 1em 4em 2em;
-}
-
-i {
-    margin-right: .5em;
-}
-
-p {
-    margin: .2em auto
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
 }
 
 hr {
+    width: 50%;
+    margin: 10px auto;
     border: none;
-    background-color: lightgray;
-    height: 1px;
+    border-top: 2px solid #333;
 }
 
-h1, h2, h3 {
-    font-weight: 100;
-    margin-bottom: 0;
+header span {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#mainLeft, #mainRight {
+    width: 45%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#mainLeft {
+    margin-right: 10px;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Contact Section */
+section p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section p i {
+    font-size: 1.2em;
+    color: #555;
+}
+
+section a {
+    text-decoration: none;
+    color: #333;
+}
+
+section a:hover {
+    text-decoration: underline;
+    color: #0073e6;
+}
+
+/* Skills Section */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Education Section */
+section p {
+    margin: 5px 0;
+}
+
+/* About Section */
+#mainRight p {
+    margin: 10px 0;
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mainLeft, #mainRight {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }
